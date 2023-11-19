@@ -14,6 +14,9 @@
 		4E80CD3C2B0A6F9F00714A5E /* MobileNetTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4E80CD3A2B0A6F9F00714A5E /* MobileNetTest.xcdatamodeld */; };
 		4E80CD3E2B0A6FA100714A5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E80CD3D2B0A6FA100714A5E /* Assets.xcassets */; };
 		4E80CD412B0A6FA100714A5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E80CD3F2B0A6FA100714A5E /* LaunchScreen.storyboard */; };
+		4E80CD492B0A6FD100714A5E /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4E80CD482B0A6FD100714A5E /* MobileNetV2.mlmodel */; };
+		4E80CD4B2B0A78B900714A5E /* ImagePredictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E80CD4A2B0A78B900714A5E /* ImagePredictor.swift */; };
+		4E80CD4D2B0A7B5300714A5E /* VNClassificationObservation+confidenceString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E80CD4C2B0A7B5200714A5E /* VNClassificationObservation+confidenceString.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		4E80CD3D2B0A6FA100714A5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E80CD402B0A6FA100714A5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E80CD422B0A6FA100714A5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E80CD482B0A6FD100714A5E /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
+		4E80CD4A2B0A78B900714A5E /* ImagePredictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePredictor.swift; sourceTree = "<group>"; };
+		4E80CD4C2B0A7B5200714A5E /* VNClassificationObservation+confidenceString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VNClassificationObservation+confidenceString.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,9 @@
 				4E80CD3F2B0A6FA100714A5E /* LaunchScreen.storyboard */,
 				4E80CD422B0A6FA100714A5E /* Info.plist */,
 				4E80CD3A2B0A6F9F00714A5E /* MobileNetTest.xcdatamodeld */,
+				4E80CD482B0A6FD100714A5E /* MobileNetV2.mlmodel */,
+				4E80CD4A2B0A78B900714A5E /* ImagePredictor.swift */,
+				4E80CD4C2B0A7B5200714A5E /* VNClassificationObservation+confidenceString.swift */,
 			);
 			path = MobileNetTest;
 			sourceTree = "<group>";
@@ -144,6 +153,9 @@
 				4E80CD362B0A6F9F00714A5E /* ViewController.swift in Sources */,
 				4E80CD3C2B0A6F9F00714A5E /* MobileNetTest.xcdatamodeld in Sources */,
 				4E80CD322B0A6F9F00714A5E /* AppDelegate.swift in Sources */,
+				4E80CD4D2B0A7B5300714A5E /* VNClassificationObservation+confidenceString.swift in Sources */,
+				4E80CD492B0A6FD100714A5E /* MobileNetV2.mlmodel in Sources */,
+				4E80CD4B2B0A78B900714A5E /* ImagePredictor.swift in Sources */,
 				4E80CD342B0A6F9F00714A5E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
