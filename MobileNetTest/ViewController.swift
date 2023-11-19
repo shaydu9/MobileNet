@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     private let imagePicker = UIImagePickerController()
+    
     var photoPicker: PHPickerViewController {
         var config = PHPickerConfiguration()
         config.selectionLimit = 1
@@ -23,6 +24,13 @@ class ViewController: UIViewController {
         photoPicker.delegate = self
         
         return photoPicker
+    }
+    
+    var cameraPicker: UIImagePickerController {
+        let cameraPicker = UIImagePickerController()
+        cameraPicker.delegate = self
+        cameraPicker.sourceType = .camera
+        return cameraPicker
     }
     
     let predictionsToShow = 2
@@ -92,10 +100,14 @@ class ViewController: UIViewController {
         return topPredictions
     }
     
-    @IBAction func cameraTapped(_ sender: UIBarButtonItem) {
+    @IBAction func galleryTapped(_ sender: UIBarButtonItem) {
         present(photoPicker, animated: true)
     }
     
+    
+    @IBAction func cameraTapped(_ sender: UIBarButtonItem) {
+        present(cameraPicker, animated: true)
+    }
 }
 
 extension ViewController: PHPickerViewControllerDelegate, UINavigationControllerDelegate {
@@ -118,6 +130,23 @@ extension ViewController: PHPickerViewControllerDelegate, UINavigationController
             }
             self.userSelectedPhoto(photo)
         }
+    }
+}
+
+extension ViewController: UIImagePickerControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: false)
+
+        // Always return the original image.
+        guard let originalImage = info[UIImagePickerController.InfoKey.originalImage] else {
+            fatalError("Picker didn't have an original image.")
+        }
+
+        guard let photo = originalImage as? UIImage else {
+            fatalError("The (Camera) Image Picker's image isn't a/n \(UIImage.self) instance.")
+        }
+
+        self.userSelectedPhoto(photo)
     }
 }
 
